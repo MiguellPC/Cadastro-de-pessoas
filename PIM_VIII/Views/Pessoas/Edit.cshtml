@@ -28,6 +28,7 @@
                 <span asp-validation-for="Cpf" class="text-danger"></span>
             </div>
             <h4>Endereço</h4>
+            <input type="hidden" asp-for="endereco.ID" />
             <div class="form-group my-3">
                 <label asp-for="endereco.Logradouro" class="control-label"></label>
                 <input asp-for="endereco.Logradouro" class="form-control" />
@@ -59,6 +60,7 @@
                 <span asp-validation-for="endereco.Estado" class="text-danger"></span>
             </div>
             <h4>Telefone</h4>
+            <input type="hidden" asp-for="telefones.ID" />
             <div class="form-group my-3">
                 <label asp-for="telefones.Ddd" class="control-label"></label>
                 <input asp-for="telefones.Ddd" class="form-control" />
@@ -69,6 +71,7 @@
                 <input asp-for="telefones.Numero" class="form-control" />
                 <span asp-validation-for="telefones.Numero" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="telefones.tipo.ID" />
             <div class="form-group my-3">
                 <label asp-for="telefones.tipo.Tipo" class="control-label"></label>
                 <input asp-for="telefones.tipo.Tipo" class="form-control" />

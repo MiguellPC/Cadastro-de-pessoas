@@ -54,8 +54,6 @@ namespace PIM_VIII.Controllers
         }
 
         // POST: Pessoas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Pessoa pessoa)
@@ -91,8 +89,6 @@ namespace PIM_VIII.Controllers
         }
 
         // POST: Pessoas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Pessoa pessoa)
@@ -160,10 +156,12 @@ namespace PIM_VIII.Controllers
                 .Include(t => t.telefones)
                 .ThenInclude(i => i.tipo)
                 .FirstOrDefaultAsync(p => p.ID == id);
-                // .FindAsync(id);
             if (pessoa != null)
             {
                 _context.Pessoa.Remove(pessoa);
+                _context.Remove(pessoa.endereco);
+                _context.Remove(pessoa.telefones);
+                _context.Remove(pessoa.telefones.tipo);
             }
             
             await _context.SaveChangesAsync();
