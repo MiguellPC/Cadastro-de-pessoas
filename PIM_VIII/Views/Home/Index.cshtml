@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    string imagePath = "/images/Filing-system.png";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="d-flex flex-column flex-md-row min-vh-70">
+    <div class="d-flex justify-content-center align-items-start align-items-md-center flex-fill">
+        <img src="@imagePath" class="mw-400"/>
+    </div>
+    <div class="mw-536px d-flex justify-content-between align-items-center flex-column p-3 p-md-5">
+        <h1 class="display-4 purple">Olá!</h1>
+        <h1 class="display-4 text-center">Seja bem-vindo ao Cadastro de Pessoas!</h1>
+        <p>
+            <a asp-controller="Pessoas" asp-action="Index" class="btn btn-outline-dark mt-3 w-200">Começar</a>
+        </p>
+    </div>
 </div>

@@ -1,0 +1,27 @@
+﻿.min-vh-70 {
+    min-height: 70vh !important;
+}
+
+.w-200 {
+    width: 200px !important;
+}
+
+.mw-400 {
+    max-width: 400px !important;
+}
+
+.mw-536px {
+    max-width: 536px !important;
+}
+
+.purple {
+    color: #6f42c1 !important;
+}
+
+.icon-20 {
+    height: 20px !important;
+}
+
+.icon-18 {
+    height: 18px !important;
+}
