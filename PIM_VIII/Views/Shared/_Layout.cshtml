@@ -14,9 +14,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav flex-grow-1 justify-content-center">
                         <li id="Home" class="nav-item" data-toggle="tooltip" title="Home">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/home.png" class="icon-20" /></a>
@@ -28,12 +27,11 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About"><img src="~/images/about.png" class="icon-18" /></a>
                         </li>
                     </ul>
-                </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="p-3 p-sm-0 pb-sm-1">
             @RenderBody()
         </main>
     </div>
